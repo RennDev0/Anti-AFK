@@ -1,0 +1,333 @@
+local AntiAFK = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local Minimize = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local ButtonFunction = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Button = Instance.new("TextButton")
+local TitleFunction = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Status = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local LoadFrame = Instance.new("Frame")
+local UIGradient_3 = Instance.new("UIGradient")
+local UICorner_4 = Instance.new("UICorner")
+local Title_2 = Instance.new("TextLabel")
+local Powered = Instance.new("TextLabel")
+local Profile = Instance.new("ImageLabel")
+local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+AntiAFK.Name = "Anti-AFK "
+AntiAFK.Parent = game.CoreGui
+AntiAFK.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = AntiAFK
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.499000013, 0, 0.372999996, 0)
+Main.Size = UDim2.new(0.30092594, 0, 0.0473723263, 0)
+Main.Visible = false
+Main.Draggable = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Main
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Main
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.77692312, 0, 0, 0)
+Minimize.Size = UDim2.new(0.111538462, 0, 1, 0)
+Minimize.Font = Enum.Font.GothamBold
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.88846159, 0, 0, 0)
+Close.Size = UDim2.new(0.111538462, 0, 1, 0)
+Close.Font = Enum.Font.GothamBold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0.300000012, 0)
+UICorner.Parent = Main
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0307692308, 0, 0, 0)
+Title.Size = UDim2.new(0.588461518, 0, 1, 0)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "RENSCRIPTS - ANTI AFK"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+ButtonFunction.Name = "ButtonFunction"
+ButtonFunction.Parent = Main
+ButtonFunction.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonFunction.Position = UDim2.new(0, 0, 1.26923072, 0)
+ButtonFunction.Size = UDim2.new(1, 0, 3.84615374, 0)
+
+UICorner_2.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_2.Parent = ButtonFunction
+
+Button.Name = "Button"
+Button.Parent = ButtonFunction
+Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Button.BackgroundColor3 = Color3.fromRGB(255, 26, 30)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.49881655, 0, 0.678784132, 0)
+Button.Size = UDim2.new(0.769230783, 0, 0.467841178, 0)
+Button.Font = Enum.Font.Unknown
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.TextScaled = true
+Button.TextSize = 14.000
+Button.TextWrapped = true
+
+TitleFunction.Name = "TitleFunction"
+TitleFunction.Parent = Button
+TitleFunction.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleFunction.BackgroundTransparency = 1.000
+TitleFunction.Position = UDim2.new(0.0900000036, 0, 0, 0)
+TitleFunction.Size = UDim2.new(0.819999933, 0, 1, 0)
+TitleFunction.Font = Enum.Font.Unknown
+TitleFunction.Text = "OFF"
+TitleFunction.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleFunction.TextScaled = true
+TitleFunction.TextSize = 14.000
+TitleFunction.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = Button
+
+Status.Name = "Status"
+Status.Parent = ButtonFunction
+Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status.BackgroundTransparency = 1.000
+Status.Position = UDim2.new(0.0266462583, 0, 0.0299999993, 0)
+Status.Size = UDim2.new(0.935903728, 0, 0.343027294, 0)
+Status.Font = Enum.Font.Unknown
+Status.Text = "Status :"
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.TextScaled = true
+Status.TextSize = 14.000
+Status.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = ButtonFunction
+
+UIAspectRatioConstraint.Parent = Main
+UIAspectRatioConstraint.AspectRatio = 10.000
+
+LoadFrame.Name = "LoadFrame"
+LoadFrame.Parent = AntiAFK
+LoadFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadFrame.BorderSizePixel = 0
+LoadFrame.Position = UDim2.new(0.366004974, 0, 0.448829949, 0)
+LoadFrame.Size = UDim2.new(0, 0, 0.099609375, 0)
+LoadFrame.Visible = false
+LoadFrame.ZIndex = 0
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))}
+UIGradient_3.Rotation = 90
+UIGradient_3.Parent = LoadFrame
+
+UICorner_4.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_4.Parent = LoadFrame
+
+Title_2.Name = "Title"
+Title_2.Parent = LoadFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.0648148134, 0, 0.370392561, 0)
+Title_2.Size = UDim2.new(0.865740716, 0, 0.588235319, 0)
+Title_2.Font = Enum.Font.SourceSansBold
+Title_2.Text = "RENSCRIPTS"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+Powered.Name = "Powered"
+Powered.Parent = LoadFrame
+Powered.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Powered.BackgroundTransparency = 1.000
+Powered.Position = UDim2.new(0.0648148134, 0, 0.0500000007, 0)
+Powered.Size = UDim2.new(0.865740716, 0, 0.392156869, 0)
+Powered.Font = Enum.Font.SourceSansItalic
+Powered.Text = "Powered by"
+Powered.TextColor3 = Color3.fromRGB(255, 255, 255)
+Powered.TextScaled = true
+Powered.TextSize = 14.000
+Powered.TextWrapped = true
+
+Profile.Name = "Profile"
+Profile.Parent = AntiAFK
+Profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Profile.BackgroundTransparency = 1.000
+Profile.Position = UDim2.new(0.454117239, 0, 0.429421425, 0)
+Profile.Size = UDim2.new(0.0893070772, 0, 0.138884902, 0)
+Profile.Image = "rbxassetid://12953819799"
+Profile.ImageTransparency = 1.000
+
+UICorner_5.CornerRadius = UDim.new(0.200000003, 0)
+UICorner_5.Parent = Profile
+
+UIAspectRatioConstraint_2.Parent = Profile
+UIAspectRatioConstraint_2.AspectRatio = 1.012
+
+-- Scripts:
+
+local function KEUVHPC_fake_script() -- Main.Handler 
+	local script = Instance.new('LocalScript', Main)
+
+	local tweenService = game:GetService("TweenService")
+	local vu = game:GetService("VirtualUser")
+	
+	local ScreenUI = script.Parent.Parent
+	
+	local main = script.Parent
+	local minBtn = main.Minimize
+	local close = main.Close
+	local buttonFunction = main.ButtonFunction
+	
+	local button = buttonFunction.Button
+	local status = buttonFunction.Status
+	
+	local titleFunction = button.TitleFunction
+	
+	local on = false
+	local min = false
+	local afk
+	
+	local function clicked(btn)
+		local clickTween = tweenService:Create(btn, TweenInfo.new(.07, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.695, 0,0.423, 0)})
+		clickTween:Play()
+		clickTween.Completed:Connect(function()
+			tweenService:Create(btn, TweenInfo.new(.07, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.769, 0,0.468, 0)}):Play()
+		end)
+	
+		if on == false then
+			on = true
+			afk = game.Players.LocalPlayer.Idled:Connect(function()
+				vu:CaptureController()
+				vu:ClickButton2(Vector2.new())
+			end)
+			tweenService:Create(btn, TweenInfo.new(.05, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(0, 255, 30)}):Play()
+			titleFunction.Text = "ON"
+		elseif on == true then
+			on = false
+			afk:Disconnect()
+			tweenService:Create(btn, TweenInfo.new(.05, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(255, 26, 30)}):Play()
+			titleFunction.Text = "OFF"
+		end
+	end
+	
+	local function closeMin(btn)
+		local cTween = tweenService:Create(btn, TweenInfo.new(.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0,0, 0)})
+		cTween:Play()
+		cTween.Completed:Connect(function()
+			buttonFunction.Visible = false
+		end)
+	end
+	
+	local function openMin(btn)
+		buttonFunction.Visible = true
+		local cTween = tweenService:Create(btn, TweenInfo.new(.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0,3.846, 0)})
+		cTween:Play()
+	end
+	
+	button.MouseEnter:Connect(function()
+		tweenService:Create(button, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.802, 0,0.488, 0)}):Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		tweenService:Create(button, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.769, 0,0.468, 0)}):Play()
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		clicked(button)
+	end)
+	
+	close.MouseButton1Click:Connect(function()
+		local tween = tweenService:Create(main, TweenInfo.new(.5, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out), {Size = UDim2.new(0,0,0,0)})
+		tween:Play()
+		tween.Completed:Connect(function()
+			ScreenUI:Destroy()
+		end)
+	end)
+	
+	minBtn.MouseButton1Click:Connect(function()
+		if min == false then
+			min = true
+			openMin(buttonFunction)
+		elseif min == true then
+			min = false
+			closeMin(buttonFunction)
+		end
+	end)
+	
+end
+coroutine.wrap(KEUVHPC_fake_script)()
+local function ZNRJ_fake_script() -- AntiAFK.MainHandler 
+	local script = Instance.new('LocalScript', AntiAFK)
+
+	local tw = game:GetService("TweenService")
+	local loadFrame = script.Parent.LoadFrame
+	local profile = script.Parent.Profile
+	
+	local main = script.Parent.Main
+	
+	wait(5)
+	
+	local profileOpen = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{ImageTransparency = 0})
+	profileOpen:Play()
+	profileOpen.Completed:Connect(function()
+		local moveProfile = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.329, 0,0.429, 0)})
+		moveProfile:Play()
+		wait(.3)
+		loadFrame.Visible = true
+		local moveLoad = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.437, 0,0.449, 0), Size = UDim2.new(0.233, 0,0.1, 0)})
+		moveLoad:Play()
+		moveLoad.Completed:Connect(function()
+			wait(5)
+			local moveDown1 = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.366, 0,2, 0)})
+			local moveDown2 = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.454, 0,0.429, 0)})
+			moveDown1:Play()
+			wait(.1)
+			moveDown2:Play()
+			moveDown2.Completed:Connect(function()
+				loadFrame:Destroy()
+				profile:Destroy()
+				wait(.5)
+				main.Visible = true
+			end)
+		end)
+	end)
+end
+coroutine.wrap(ZNRJ_fake_script)()
