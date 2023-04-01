@@ -13,6 +13,7 @@ local UICorner_3 = Instance.new("UICorner")
 local Status = Instance.new("TextLabel")
 local UIGradient_2 = Instance.new("UIGradient")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Load = Instance.new("Frame")
 local LoadFrame = Instance.new("Frame")
 local UIGradient_3 = Instance.new("UIGradient")
 local UICorner_4 = Instance.new("UICorner")
@@ -20,6 +21,8 @@ local Title_2 = Instance.new("TextLabel")
 local Powered = Instance.new("TextLabel")
 local Profile = Instance.new("ImageLabel")
 local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+
 local uiStroke1 = Instance.new("UIStroke")
 local uisStroke2 = Instance.new("UIStroke")
 local uisStroke3 = Instance.new("UIStroke")
@@ -29,15 +32,6 @@ local uisStroke3 = Instance.new("UIStroke")
 AntiAFK.Name = "Anti-AFK "
 AntiAFK.Parent = game.CoreGui
 AntiAFK.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Main.Name = "Main"
-Main.Parent = AntiAFK
-Main.AnchorPoint = Vector2.new(0.5, 0.5)
-Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.499000013, 0, 0.372999996, 0)
-Main.Size = UDim2.new(0.30092594, 0, 0.0473723263, 0)
-main.Draggable = true
 
 uiStroke1.Color = Color3.fromRGB(22,22,22)
 uiStroke1.Thickness = 1.5
@@ -51,6 +45,15 @@ uisStroke3.Color = Color3.fromRGB(255, 255, 255)
 uisStroke3.Thickness = 1.1
 uisStroke3.Parent = Button
 uisStroke3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+Main.Name = "Main"
+Main.Parent = AntiAFK
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.499000013, 0, 0.372999996, 0)
+Main.Size = UDim2.new(0.30092594, 0, 0.0473723263, 0)
+Main.Visible = false
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))}
 UIGradient.Rotation = 90
@@ -159,12 +162,20 @@ UIGradient_2.Parent = ButtonFunction
 UIAspectRatioConstraint.Parent = Main
 UIAspectRatioConstraint.AspectRatio = 10.000
 
+Load.Name = "Load"
+Load.Parent = AntiAFK
+Load.AnchorPoint = Vector2.new(0.5, 0.5)
+Load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Load.BackgroundTransparency = 1.000
+Load.Position = UDim2.new(0.499280006, 0, 0.5, 0)
+Load.Size = UDim2.new(0.586712778, 0, 0.64453125, 0)
+
 LoadFrame.Name = "LoadFrame"
-LoadFrame.Parent = AntiAFK
+LoadFrame.Parent = Load
 LoadFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 LoadFrame.BorderSizePixel = 0
-LoadFrame.Position = UDim2.new(0.366004974, 0, 0.448829949, 0)
-LoadFrame.Size = UDim2.new(0, 0, 0.100000009, 0)
+LoadFrame.Position = UDim2.new(0.38271144, 0, 0.413810551, 0)
+LoadFrame.Size = UDim2.new(0, 0, 0.173999995, 0)
 LoadFrame.Visible = false
 LoadFrame.ZIndex = 0
 
@@ -192,8 +203,8 @@ Powered.Name = "Powered"
 Powered.Parent = LoadFrame
 Powered.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Powered.BackgroundTransparency = 1.000
-Powered.Position = UDim2.new(0.159449607, 0, -0.0139331808, 0)
-Powered.Size = UDim2.new(0.690140724, 0, 0.437605649, 0)
+Powered.Position = UDim2.new(0.159449548, 0, 0.0500000007, 0)
+Powered.Size = UDim2.new(0.690140724, 0, 0.402760535, 0)
 Powered.Font = Enum.Font.SourceSansItalic
 Powered.Text = "Powered by"
 Powered.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -202,53 +213,85 @@ Powered.TextSize = 14.000
 Powered.TextWrapped = true
 
 Profile.Name = "Profile"
-Profile.Parent = AntiAFK
+Profile.Parent = Load
 Profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Profile.BackgroundTransparency = 1.000
-Profile.Position = UDim2.new(0.454117239, 0, 0.429421425, 0)
-Profile.Size = UDim2.new(0.0893070772, 0, 0.138884902, 0)
+Profile.Position = UDim2.new(0.425484806, 0, 0.382728785, 0)
+Profile.Size = UDim2.new(0.149356544, 0, 0.232270122, 0)
 Profile.Image = "rbxassetid://12953819799"
 Profile.ImageTransparency = 1.000
 
 UICorner_5.CornerRadius = UDim.new(0.200000003, 0)
 UICorner_5.Parent = Profile
 
+UIAspectRatioConstraint_2.Parent = Load
+UIAspectRatioConstraint_2.AspectRatio = 1.573
+
 -- Scripts:
 
-local function NIPDB_fake_script() -- Main.Handler 
+local function UYGFGHX_fake_script() -- Main.Handler 
 	local script = Instance.new('LocalScript', Main)
 
 	local tweenService = game:GetService("TweenService")
 	local vu = game:GetService("VirtualUser")
-	
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+
 	local ScreenUI = script.Parent.Parent
-	
+
 	local main = script.Parent
 	local minBtn = main.Minimize
 	local close = main.Close
 	local buttonFunction = main.ButtonFunction
-	
+
 	local button = buttonFunction.Button
 	local status = buttonFunction.Status
-	
+
 	local titleFunction = button.TitleFunction
-	
+
 	local on = false
 	local min = false
 	local afk
-	
+
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	local function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	local function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			main.Position = UDim2.new(startPos.X.Scale, Lerp(main.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(main.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		main.Position = UDim2.new(startPos.X.Scale, Lerp(main.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(main.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+
 	local function clicked(btn)
 		local clickTween = tweenService:Create(btn, TweenInfo.new(.07, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.695, 0,0.423, 0)})
 		clickTween:Play()
 		clickTween.Completed:Connect(function()
 			tweenService:Create(btn, TweenInfo.new(.07, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.769, 0,0.468, 0)}):Play()
 		end)
-	
+
 		if on == false then
 			on = true
 			afk = game.Players.LocalPlayer.Idled:Connect(function()
-				vu:CaptureController()
-				vu:ClickButton2(Vector2.new())
+				vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+				wait(1)
+				vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 			end)
 			tweenService:Create(btn, TweenInfo.new(.05, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(0, 255, 30)}):Play()
 			titleFunction.Text = "ON"
@@ -259,7 +302,7 @@ local function NIPDB_fake_script() -- Main.Handler
 			titleFunction.Text = "OFF"
 		end
 	end
-	
+
 	local function closeMin(btn)
 		local cTween = tweenService:Create(btn, TweenInfo.new(.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0,0, 0)})
 		cTween:Play()
@@ -267,33 +310,35 @@ local function NIPDB_fake_script() -- Main.Handler
 			buttonFunction.Visible = false
 		end)
 	end
-	
+
 	local function openMin(btn)
 		buttonFunction.Visible = true
 		local cTween = tweenService:Create(btn, TweenInfo.new(.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0,3.846, 0)})
 		cTween:Play()
 	end
-	
+
+
 	button.MouseEnter:Connect(function()
 		tweenService:Create(button, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.802, 0,0.488, 0)}):Play()
 	end)
-	
+
 	button.MouseLeave:Connect(function()
 		tweenService:Create(button, TweenInfo.new(.2, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0.769, 0,0.468, 0)}):Play()
 	end)
-	
+
 	button.MouseButton1Click:Connect(function()
 		clicked(button)
 	end)
-	
+
 	close.MouseButton1Click:Connect(function()
+		afk:Disconnect()
 		local tween = tweenService:Create(main, TweenInfo.new(.5, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out), {Size = UDim2.new(0,0,0,0)})
 		tween:Play()
 		tween.Completed:Connect(function()
 			ScreenUI:Destroy()
 		end)
 	end)
-	
+
 	minBtn.MouseButton1Click:Connect(function()
 		if min == false then
 			min = true
@@ -303,33 +348,71 @@ local function NIPDB_fake_script() -- Main.Handler
 			closeMin(buttonFunction)
 		end
 	end)
-	
+
+	main.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = main.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	main.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(NIPDB_fake_script)()
-local function OIESYB_fake_script() -- AntiAFK.MainHandler 
+coroutine.wrap(UYGFGHX_fake_script)()
+local function NXZH_fake_script() -- AntiAFK.MainHandler 
 	local script = Instance.new('LocalScript', AntiAFK)
 
+	local player = game.Players.LocalPlayer
+	wait()
+	if player:WaitForChild("PlayerGui"):FindFirstChild("Anti-AFK") then
+		player:WaitForChild("PlayerGui"):FindFirstChild("Anti-AFK"):Destroy()
+	end
+
 	local tw = game:GetService("TweenService")
-	local loadFrame = script.Parent.LoadFrame
-	local profile = script.Parent.Profile
-	
+	local load = script.Parent.Load
+	local loadFrame = load.LoadFrame
+	local profile = load.Profile
+
+	local openingSound = Instance.new("Sound", script)
+	openingSound.Name = "open"
+	openingSound.SoundId = "rbxassetid://9095920212"
+	openingSound.Volume = .5
+	openingSound.TimePosition = .2
+
 	local main = script.Parent.Main
-	
-	wait(5)
-	
-	local profileOpen = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{ImageTransparency = 0})
+
+	wait(2)
+
+	openingSound:Play()
+	local profileOpen = tw:Create(profile, TweenInfo.new(1,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{ImageTransparency = 0})
 	profileOpen:Play()
 	profileOpen.Completed:Connect(function()
-		local moveProfile = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.329, 0,0.429, 0)})
+		wait(1)
+		local moveProfile = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.215, 0,0.383, 0)})
 		moveProfile:Play()
-		wait(.3)
+		wait(.2)
 		loadFrame.Visible = true
-		local moveLoad = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.437, 0,0.449, 0), Size = UDim2.new(0.233, 0,0.1, 0)})
+		local moveLoad = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Size = UDim2.new(0.401, 0,0.174, 0)})
+		-- Position = UDim2.new(0.437, 0,0.449, 0),
 		moveLoad:Play()
 		moveLoad.Completed:Connect(function()
-			wait(5)
-			local moveDown1 = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.366, 0,2, 0)})
-			local moveDown2 = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.454, 0,0.429, 0)})
+			wait(6)
+			local moveDown1 = tw:Create(loadFrame, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.383, 0,2, 0)})
+			local moveDown2 = tw:Create(profile, TweenInfo.new(.5,Enum.EasingStyle.Sine, Enum.EasingDirection.Out),{Position = UDim2.new(0.425, 0,0.383, 0)})
 			moveDown1:Play()
 			wait(.1)
 			moveDown2:Play()
@@ -346,4 +429,4 @@ local function OIESYB_fake_script() -- AntiAFK.MainHandler
 		end)
 	end)
 end
-coroutine.wrap(OIESYB_fake_script)()
+coroutine.wrap(NXZH_fake_script)()
