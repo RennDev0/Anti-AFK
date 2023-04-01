@@ -376,12 +376,6 @@ coroutine.wrap(UYGFGHX_fake_script)()
 local function NXZH_fake_script() -- AntiAFK.MainHandler 
 	local script = Instance.new('LocalScript', AntiAFK)
 
-	local player = game.Players.LocalPlayer
-	wait()
-	if player:WaitForChild("PlayerGui"):FindFirstChild("Anti-AFK") then
-		player:WaitForChild("PlayerGui"):FindFirstChild("Anti-AFK"):Destroy()
-	end
-
 	local tw = game:GetService("TweenService")
 	local load = script.Parent.Load
 	local loadFrame = load.LoadFrame
