@@ -30,7 +30,7 @@ local uisStroke3 = Instance.new("UIStroke")
 --Properties:
 
 AntiAFK.Name = "Anti-AFK "
-AntiAFK.Parent = game.CoreGui
+AntiAFK.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 AntiAFK.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 uiStroke1.Color = Color3.fromRGB(22,22,22)
@@ -331,7 +331,6 @@ local function UYGFGHX_fake_script() -- Main.Handler
 	end)
 
 	close.MouseButton1Click:Connect(function()
-		afk:Disconnect()
 		local tween = tweenService:Create(main, TweenInfo.new(.5, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out), {Size = UDim2.new(0,0,0,0)})
 		tween:Play()
 		tween.Completed:Connect(function()
